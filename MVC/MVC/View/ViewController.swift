@@ -12,9 +12,29 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        print("viewDidLoad")
+        hello()
     }
 
+    override func loadView() {
+        super.loadView()
+        print("loadView")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("viewWillAppear")
+    }
 
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        print("viewDidLayoutSubviews")
+    }
+    
+    //MARK: - Func
+    func hello() {
+        print("Salam aleykum")
+    }
+    
 }
 
