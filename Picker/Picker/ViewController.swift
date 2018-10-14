@@ -24,8 +24,15 @@ class ViewController: UIViewController {
         
         self.view.addSubview(picker)
         
+        picker.addTarget(self, action: #selector(datePickerSelected(param:)), for: .valueChanged)
+        
     }
 
+    @objc func datePickerSelected(param: UIDatePicker) {
+        if(param.isEqual(self.picker)) {
+            print("data selected : ", param.date) // Именно date, а не datA
+        }
+    }
 
 }
 
