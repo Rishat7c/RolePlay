@@ -10,7 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    let picker = UIPickerView()
+//    let picker = UIPickerView()
+    let picker = UIDatePicker()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,8 +19,8 @@ class ViewController: UIViewController {
         picker.center = view.center
         
         // Подписка на протокол
-        picker.dataSource = self
-        picker.delegate = self
+//        picker.dataSource = self
+//        picker.delegate = self
         
         self.view.addSubview(picker)
         
@@ -28,28 +29,28 @@ class ViewController: UIViewController {
 
 }
 
-// Расширяем родительский класс
-extension ViewController: UIPickerViewDataSource {
-    
-    // Сколько компонентов выводить
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    // Сколько строк в компоненте
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        // Кол-во строк
-        return 10
-    }
-    
-}
-
-extension ViewController: UIPickerViewDelegate {
-    
-    // Выводим строки
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        let result = "row = \(row)"
-        return result
-    }
-    
-}
+//// Расширяем родительский класс
+//extension ViewController: UIPickerViewDataSource {
+//
+//    // Сколько компонентов выводить
+//    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+//        return 1
+//    }
+//
+//    // Сколько строк в компоненте
+//    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+//        // Кол-во строк
+//        return 10
+//    }
+//
+//}
+//
+//extension ViewController: UIPickerViewDelegate {
+//
+//    // Выводим строки
+//    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+//        let result = "row = \(row)"
+//        return result
+//    }
+//
+//}
