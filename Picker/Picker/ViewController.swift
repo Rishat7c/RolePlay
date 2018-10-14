@@ -18,7 +18,8 @@ class ViewController: UIViewController {
         
         picker.center = view.center
         
-        picker.datePickerMode = .date
+//        picker.datePickerMode = .date // Даты
+        picker.datePickerMode = .countDownTimer // Таймер
         
         // Подписка на протокол
 //        picker.dataSource = self
@@ -36,6 +37,8 @@ class ViewController: UIViewController {
         
         picker.minimumDate = intervalYears_1
         picker.maximumDate = intervalYears_2
+        
+        picker.countDownDuration = 2 * 60 
         
         picker.addTarget(self, action: #selector(datePickerSelected(param:)), for: .valueChanged)
         
