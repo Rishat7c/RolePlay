@@ -18,11 +18,24 @@ class ViewController: UIViewController {
         
         picker.center = view.center
         
+        picker.datePickerMode = .date
+        
         // Подписка на протокол
 //        picker.dataSource = self
 //        picker.delegate = self
         
         self.view.addSubview(picker)
+        
+        var oneYear = TimeInterval()
+        oneYear = 365 * 24 * 60 * 60
+        
+        let today = Date()
+        
+        let intervalYears_1 = today.addingTimeInterval(oneYear)
+        let intervalYears_2 = today.addingTimeInterval(oneYear*2)
+        
+        picker.minimumDate = intervalYears_1
+        picker.maximumDate = intervalYears_2
         
         picker.addTarget(self, action: #selector(datePickerSelected(param:)), for: .valueChanged)
         
