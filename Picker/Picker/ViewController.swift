@@ -38,6 +38,7 @@ extension ViewController: UIPickerViewDataSource {
     
     // Сколько строк в компоненте
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        // Кол-во строк
         return 10
     }
     
@@ -45,6 +46,7 @@ extension ViewController: UIPickerViewDataSource {
 
 extension ViewController: UIPickerViewDelegate {
     
+    // Выводим строки
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         let result = "row = \(row)"
         return result
