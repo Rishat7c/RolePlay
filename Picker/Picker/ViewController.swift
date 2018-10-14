@@ -17,12 +17,25 @@ class ViewController: UIViewController {
         
         picker.center = view.center
         
+        // Подписка на протокол
+        picker.dataSource = self
+        
         self.view.addSubview(picker)
-        
-        
         
     }
 
 
 }
 
+// Расширяем родительский класс
+extension ViewController: UIPickerViewDataSource {
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return 10
+    }
+    
+}
