@@ -12,6 +12,9 @@
 		0AAED22F2173CA2400D1CB32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AAED22D2173CA2400D1CB32 /* Main.storyboard */; };
 		0AAED2312173CA2500D1CB32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AAED2302173CA2500D1CB32 /* Assets.xcassets */; };
 		0AAED2342173CA2500D1CB32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AAED2322173CA2500D1CB32 /* LaunchScreen.storyboard */; };
+		0AAED23E2173CCC000D1CB32 /* swift.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AAED23B2173CCC000D1CB32 /* swift.png */; };
+		0AAED23F2173CCC000D1CB32 /* c.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AAED23C2173CCC000D1CB32 /* c.png */; };
+		0AAED2402173CCC000D1CB32 /* java.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AAED23D2173CCC000D1CB32 /* java.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		0AAED2302173CA2500D1CB32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0AAED2332173CA2500D1CB32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0AAED2352173CA2500D1CB32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0AAED23B2173CCC000D1CB32 /* swift.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = swift.png; path = ../../../swift.png; sourceTree = "<group>"; };
+		0AAED23C2173CCC000D1CB32 /* c.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = c.png; path = ../../../c.png; sourceTree = "<group>"; };
+		0AAED23D2173CCC000D1CB32 /* java.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = java.png; path = ../../../java.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,9 @@
 				0AAED22B2173CA2400D1CB32 /* ViewController.swift */,
 				0AAED22D2173CA2400D1CB32 /* Main.storyboard */,
 				0AAED2302173CA2500D1CB32 /* Assets.xcassets */,
+				0AAED23C2173CCC000D1CB32 /* c.png */,
+				0AAED23D2173CCC000D1CB32 /* java.png */,
+				0AAED23B2173CCC000D1CB32 /* swift.png */,
 				0AAED2322173CA2500D1CB32 /* LaunchScreen.storyboard */,
 				0AAED2352173CA2500D1CB32 /* Info.plist */,
 			);
@@ -123,8 +132,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AAED2342173CA2500D1CB32 /* LaunchScreen.storyboard in Resources */,
+				0AAED23E2173CCC000D1CB32 /* swift.png in Resources */,
 				0AAED2312173CA2500D1CB32 /* Assets.xcassets in Resources */,
 				0AAED22F2173CA2400D1CB32 /* Main.storyboard in Resources */,
+				0AAED23F2173CCC000D1CB32 /* c.png in Resources */,
+				0AAED2402173CCC000D1CB32 /* java.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
