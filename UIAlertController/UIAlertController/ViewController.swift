@@ -17,14 +17,14 @@ class ViewController: UIViewController {
 
     @IBAction func firstButton(_ sender: Any) {
         
-        let alertController = UIAlertController(title: "Error", message: "Hello, world!", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Error", message: "Hello, world!", preferredStyle: .actionSheet)
         
         let action = UIAlertAction(title: "Ok", style: .default) { (action) in
-            let text = alertController.textFields?.first?.text
-            print(text ?? "nil text")
+//            let text = alertController.textFields?.first?.text
+//            print(text ?? "nil text")
         }
         
-        alertController.addTextField(configurationHandler: nil)
+//        alertController.addTextField(configurationHandler: nil)
         alertController.addAction(action)
         self.present(alertController,animated: true,completion: nil)
         
