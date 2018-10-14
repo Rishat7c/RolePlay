@@ -28,7 +28,15 @@ class ViewController: UIViewController {
         
     }
     
+    //MARK: - Action
+    @IBAction func playAudio(_ sender: Any) {
+        self.player.play()
+    }
     
-
+    //MARK: - Action
+    @IBAction func pauseAudio(_ sender: Any) {
+        self.player.pause()
+    }
+    
 }
 
