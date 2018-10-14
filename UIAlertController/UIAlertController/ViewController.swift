@@ -33,7 +33,7 @@ class ViewController: UIViewController {
         }
         
         alertController.addTextField { (textField) in
-            
+            textField.isSecureTextEntry = true
         }
         
         //        alertController.addTextField(configurationHandler: nil)
