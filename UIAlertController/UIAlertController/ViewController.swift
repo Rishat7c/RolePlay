@@ -9,25 +9,36 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var textLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
 
     @IBAction func firstButton(_ sender: Any) {
-        
-        let alertController = UIAlertController(title: "Error", message: "Hello, world!", preferredStyle: .actionSheet)
+        self.textLabel.text = "Hi, "
+        self.alert(title: "Внимание!", message: "Введите имя", style: .alert)
+    }
+    
+    func alert(title: String, message: String, style: UIAlertController.Style) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: style)
         
         let action = UIAlertAction(title: "Ok", style: .default) { (action) in
-//            let text = alertController.textFields?.first?.text
-//            print(text ?? "nil text")
+            let text = alertController.textFields?.first
+            self.textLabel.text! += (text?.text!)!
+            
+//                        print(text ?? "nil text")
         }
         
-//        alertController.addTextField(configurationHandler: nil)
+        alertController.addTextField { (textField) in
+            
+        }
+        
+        //        alertController.addTextField(configurationHandler: nil)
         alertController.addAction(action)
         self.present(alertController,animated: true,completion: nil)
-        
     }
     
 }
