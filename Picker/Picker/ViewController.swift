@@ -19,6 +19,7 @@ class ViewController: UIViewController {
         
         // Подписка на протокол
         picker.dataSource = self
+        picker.delegate = self
         
         self.view.addSubview(picker)
         
@@ -30,12 +31,23 @@ class ViewController: UIViewController {
 // Расширяем родительский класс
 extension ViewController: UIPickerViewDataSource {
     
+    // Сколько компонентов выводить
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
+    // Сколько строк в компоненте
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return 10
+    }
+    
+}
+
+extension ViewController: UIPickerViewDelegate {
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        let result = "row = \(row)"
+        return result
     }
     
 }
