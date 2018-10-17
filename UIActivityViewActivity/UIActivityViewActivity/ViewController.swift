@@ -16,6 +16,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.createTextField()
+        self.createButton()
     }
 
     //MARK: - Method
@@ -42,7 +45,7 @@ class ViewController: UIViewController {
         
         if text?.characters.count == 0 {
             let message = "С начало введите текст"
-            let alertController = UIAlertController(title: "Message", message: message, preferredStyle: .actionSheet)
+            let alertController = UIAlertController(title: "Message", message: message, preferredStyle: .alert)
             let alertAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
             alertController.addAction(alertAction)
             self.present(alertController,animated: true,completion: nil)
