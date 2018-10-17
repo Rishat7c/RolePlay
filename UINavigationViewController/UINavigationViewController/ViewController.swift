@@ -28,7 +28,8 @@ class ViewController: UIViewController {
     
     @objc func touchButton(param: Any) {
         
-        
+        let secondVC = secondViewController()
+        self.navigationController?.pushViewController(secondVC, animated: true)
         
     }
 
