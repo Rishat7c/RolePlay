@@ -13,6 +13,16 @@ class secondViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Second VC"
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        self.perform(#selector(goBack), with: nil, afterDelay: 3.0)
+    }
+    
+    @objc func goBack() {
+        self.navigationController?.popViewController(animated: true)
     }
     
 }
