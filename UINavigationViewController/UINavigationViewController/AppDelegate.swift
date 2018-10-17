@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let viewController = ViewController()
         self.navController = UINavigationController(rootViewController: viewController)
         
+        self.window = UIWindow(frame: UIScreen.main.bounds)
         
     
         return true
