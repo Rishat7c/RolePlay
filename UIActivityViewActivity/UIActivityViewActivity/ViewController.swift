@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     var buttonShare = UIButton()
     var textField = UITextField()
@@ -28,6 +28,7 @@ class ViewController: UIViewController {
         self.textField.center = self.view.center
 //        self.textField.borderStyle = UITextBorderStyle.roundedRect
         self.textField.placeholder = "Enter text to share"
+        self.textField.delegate = self
         self.view.addSubview(self.textField)
     }
     
@@ -55,6 +56,13 @@ class ViewController: UIViewController {
         
         self.present(self.activityViewController!, animated: true, completion: nil)
         
+    }
+    
+    //MARK: - UITextFieldDelegate
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        // Прячем клаву
+        self.textField.resignFirstResponder()
+        return true
     }
     
 }
