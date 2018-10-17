@@ -48,7 +48,9 @@ class ViewController: UIViewController {
             self.present(alertController,animated: true,completion: nil)
         }
         
-        self.activityViewController = UIActivityViewController(activityItems: <#T##[Any]#>, applicationActivities: <#T##[UIActivity]?#>)
+        self.activityViewController = UIActivityViewController(activityItems: [self.textField.text ?? "nil"], applicationActivities: nil)
+        
+        self.present(self.activityViewController!, animated: true, completion: nil)
         
     }
     
