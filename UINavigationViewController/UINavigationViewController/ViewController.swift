@@ -10,10 +10,26 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var displaySecondButton = UIButton()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.title = "First VC"
+        
+        self.displaySecondButton = UIButton(type: .system)
+        self.displaySecondButton.setTitle("Second VC", for: .normal)
+        self.displaySecondButton.sizeToFit()
+        self.displaySecondButton.center = self.view.center
+        self.displaySecondButton.addTarget(self, action: #selector(touchButton), for: .touchUpInside)
+        self.view.addSubview(displaySecondButton)
+        
+    }
+    
+    @objc func touchButton(param: Any) {
+        
+        
+        
     }
 
 
