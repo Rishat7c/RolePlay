@@ -13,13 +13,28 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .camera, target: self, action: #selector(touchItem))
+        title = "View controller"
+        let items = ["up","down"]
+        
+        let segmentController = UISegmentedControl(items: items)
+//        segmentController.isMomentary = true
+        segmentController.addTarget(self, action: #selector(vkladka), for: .valueChanged)
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: segmentController)
         
     }
     
-    @objc func touchItem(param: Any) {
-        print("add click")
+    //MARK: - Method
+    @objc func vkladka(param: UISegmentedControl) {
+        switch param.selectedSegmentIndex {
+        case 0:
+            print("up")
+        case 1:
+            print("down")
+        default:
+            break
+        }
     }
-
+    
 }
 
