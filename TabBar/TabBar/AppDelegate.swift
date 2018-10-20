@@ -21,8 +21,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let firstVC = ViewController()
         let secondVC = SecondViewController()
         
-        let tabbarVC = UITabBarController()
+        // nav
+        let firstNavController = UINavigationController(rootViewController: firstVC)
+        let secondNavController = UINavigationController(rootViewController: secondVC)
         
+        let tabbarVC = UITabBarController()
+        tabbarVC.setViewControllers([firstNavController,secondNavController], animated: true)
+        
+        self.window?.rootViewController = tabbarVC
+        self.window?.makeKeyAndVisible()
         
         return true
     }
