@@ -13,7 +13,13 @@ class SecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.title = "Second VC"
+        self.navigationItem.title = "Second VC"
+        
+        var tabBarItem = UITabBarItem()
+        tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 1)
+//        tabBarItem.image = UIImage(named: "apple")
+        self.tabBarItem = tabBarItem
+        
         self.view.backgroundColor = UIColor.green
         
     }
