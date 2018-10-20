@@ -12,7 +12,14 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height: 40))
+        imageView.contentMode = .scaleAspectFit
+        let image = UIImage(named: "apple")
+        imageView.image = image
+        
+        self.navigationItem.titleView = imageView
+        
     }
 
 
