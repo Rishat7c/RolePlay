@@ -13,18 +13,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        createImageTitleView()
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .camera, target: self, action: #selector(touchItem))
         
     }
     
-    //MARK: - Method
-    fileprivate func createImageTitleView() {
-        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height: 40))
-        imageView.contentMode = .scaleAspectFit
-        let image = UIImage(named: "apple")
-        imageView.image = image
-        
-        self.navigationItem.titleView = imageView
+    @objc func touchItem(param: Any) {
+        print("add click")
     }
 
 }
