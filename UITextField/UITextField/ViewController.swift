@@ -36,34 +36,35 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     //MARK: - UITextFieldDelegate
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        print("textFieldShouldBeginEditing = это я решаю можно ли редачить поле?")
         return true
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-    
+        print("textFieldDidBeginEditing = внимание! началось редактирование")
     }
    
     func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        print("textFieldShouldEndEditing = закончилось редактирование")
         return true
     }
     
-    func textFieldDidEndEditing(_ textField: UITextField) {
-    
-    }
-    
     func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
-    
+        print("textFieldDidEndEditing")
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        print("shouldChangeCharactersIn = вы ввели какую-то букву/символ = \(string)")
         return true
     }
     
     func textFieldShouldClear(_ textField: UITextField) -> Bool {
+        print("textFieldShouldClear = ты что-то очистил")
         return true
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        print("textFieldShouldReturn = хотите убрать клаивиатуру?")
         return true
     }
 
