@@ -65,6 +65,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         print("textFieldShouldReturn = хотите убрать клаивиатуру?")
+        
+        if textField == self.textField {
+            self.textField.resignFirstResponder()
+        }
+        
         return true
     }
 
