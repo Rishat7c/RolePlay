@@ -48,6 +48,8 @@ class ViewController: UIViewController {
             myTextView.scrollIndicatorInsets = myTextView.contentInset
         }
         
+        myTextView.scrollRangeToVisible(myTextView.selectedRange)
+        
     }
 
 }
