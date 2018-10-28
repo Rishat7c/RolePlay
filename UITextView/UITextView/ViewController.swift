@@ -15,6 +15,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        NotificationCenter.default.addObserver(self, selector: #selector(updateTextView), name: UIResponder.keyboardDidShowNotification, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(updateTextView), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
         createTextView()
         
     }
@@ -33,7 +37,7 @@ class ViewController: UIViewController {
         self.myTextView.backgroundColor = UIColor.white
     }
 
-    func updateTextView(param: Notification) {
+    @objc func updateTextView(param: Notification) {
         let userInfo = param.userInfo
         
         let getKeyBoardRect = (userInfo![UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
