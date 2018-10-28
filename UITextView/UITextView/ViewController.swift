@@ -39,10 +39,13 @@ class ViewController: UIViewController {
         let getKeyBoardRect = (userInfo![UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
         let keyBoardFrame = self.view.convert(getKeyBoardRect, to: view.window)
         
-        if param.name == Notification.Name.UIResponder.keyboardWillHideNotification {
+        if param.name == UIResponder.keyboardWillHideNotification {
         
             myTextView.contentInset = UIEdgeInsets.zero
         
+        } else {
+            myTextView.contentInset = UIEdgeInsets(top: 0,left: 0,bottom: keyBoardFrame.height,right: 0)
+            myTextView.scrollIndicatorInsets = myTextView.contentInset
         }
         
     }
