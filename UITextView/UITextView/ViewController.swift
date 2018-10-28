@@ -27,6 +27,10 @@ class ViewController: UIViewController {
         myTextView.backgroundColor = UIColor.gray
         self.view.addSubview(myTextView)
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.myTextView.resignFirstResponder()
+    }
 
 
 }
