@@ -30,8 +30,22 @@ class ViewController: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.myTextView.resignFirstResponder()
+        self.myTextView.backgroundColor = UIColor.white
     }
 
+    func updateTextView(param: Notification) {
+        let userInfo = param.userInfo
+        
+        let getKeyBoardRect = (userInfo![UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+        let keyBoardFrame = self.view.convert(getKeyBoardRect, to: view.window)
+        
+        if param.name == Notification.Name.UIResponder.keyboardWillHideNotification {
+        
+            myTextView.contentInset = UIEdgeInsets.zero
+        
+        }
+        
+    }
 
 }
 
