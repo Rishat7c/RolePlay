@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        myTextView = UITextView(frame: self.view.bounds)
+        myTextView = UITextView(frame: CGRect(x: 20, y: 100, width: self.view.bounds.width - 50, height: self.view.bounds.height / 2))
         myTextView.text = "Text here..."
         myTextView.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0)
         myTextView.font = UIFont.systemFont(ofSize: 17)
